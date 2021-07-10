@@ -1,0 +1,8 @@
+.mainImage{
+    float: right;
+    display: inline-block;
+    position: absolute;
+    top: 0px;
+    width: 70%;
+    height: 550px;
+}
