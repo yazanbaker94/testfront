@@ -9,6 +9,7 @@ import Col from 'react-bootstrap/Col'
 import Card from 'react-bootstrap/Card'
 import CardGroup from 'react-bootstrap/CardGroup'
 import JobModal from './JobModal'
+import axios from 'axios';
 
 
 
@@ -16,11 +17,28 @@ class FindTalent extends Component {
     constructor(props) {
     super(props);
     this.state={
-        show:false
+        show:false,
+        jobData:[]
     }
     }
 
+    
+
+    dataSubmitHandler = async () => {
+     
+  
+      const axiosResponse = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/findJobs`)
+      console.log(axiosResponse)
+
+      this.setState({
+        jobData: axiosResponse.data,
+      })
+
+    }
+
+
     showModal = () =>{
+      this.dataSubmitHandler();
         this.setState({
             show:true
         });
@@ -35,7 +53,15 @@ class FindTalent extends Component {
     render() {
         return (     
             <div>
-<JobModal show={this.state.show} hide={this.hideModal} />
+
+ 
+
+     <JobModal show={this.state.show} hide={this.hideModal} showData={this.state.jobData} />
+
+ 
+
+
+
        
 
 
@@ -53,7 +79,7 @@ class FindTalent extends Component {
     position: 'relative',
     bottom:'300px',
     left:'300px'
-  }} variant="outline-success" size="lg" onClick={this.showModal}> Find a Job</Button>{' '}
+  }} variant="outline-success" size="lg" onClick={this.showModal} > Find a Job</Button>{' '}
 
     </Carousel.Caption>
   </Carousel.Item>
