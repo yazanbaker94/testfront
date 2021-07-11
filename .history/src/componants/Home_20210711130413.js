@@ -4,13 +4,25 @@ import Footer from '../componants/Footer';
 import './Home.css'
 import { withAuth0 } from '@auth0/auth0-react';
 
-
+import {
+    BrowserRouter as Router,
+    Route,
+    Switch,
+    Link
+} from 'react-router-dom';
 
 class Home extends Component {
     render() {
         return (
             <div>
+                <Router>
                 <Header />
+                <Switch>
+                    <Route path='/'>
+                        <Home/>
+                    </Route>
+                </Switch>
+                </Router>
                 <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Triangle-grey.svg/1280px-Triangle-grey.svg.png' alt='trianglr' className='mainTraingle'/>
                 {/* <img src='https://www.marwinvalve.com/wp-content/uploads/2018/04/placeholder-rectangle.png' alt='placeHolder' className="mainImage" /> */}
                 <h1>Some Paragraph
