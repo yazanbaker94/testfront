@@ -1,0 +1,13 @@
+.navBar{
+    display: inline-block;
+    margin-right: 50px;
+}
+
+.Logo{
+    font-family: cursive;
+    margin-right: 300px;
+}
+
+.logIn{
+    margin-left: 400px;
+}

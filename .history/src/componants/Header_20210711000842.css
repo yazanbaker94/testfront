@@ -1,0 +1,16 @@
+.navBar{
+    display: inline-block;
+    margin-right: 30px;
+}
+a{
+    font-size: 25px;
+}
+.Logo{
+    font-family: cursive;
+    margin-right: 250px;
+    margin-left: 30px;
+}
+
+.logIn{
+    margin-left: 300px;
+}

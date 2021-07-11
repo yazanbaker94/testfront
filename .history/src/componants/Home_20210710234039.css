@@ -1,0 +1,103 @@
+*{
+    box-sizing: border-box;
+}
+/*.........First Section.........*/
+.mainTraingle{
+    position: absolute;
+    top: 0px;
+    z-index: -1;
+    width: 100%;
+    height: 550px;
+    transform: scaleX(-1);
+}
+/* .mainImage{
+    display: inline-block;
+    position: absolute;
+    top: 0px;
+    width: 70%;
+    height: 550px;
+    z-index: -1;
+    margin-left: 405px;
+} */
+h1{
+    margin-top: 150px;
+    margin-bottom: 330px;
+    margin-left: 50px;
+    font-size: 60px;
+}
+h1 span{
+    position: relative;
+    top: 50px;
+    left: -350px;
+    font-size: 20px;
+}
+
+.line{
+    width:800px;
+    height: 20px;
+    background-color: black;
+}
+/*.........Second Section.........*/
+section h2{
+    position: relative;
+    margin-left: 700px;
+    margin-right: 300px;
+    font-size: 50px;
+    z-index: 1;
+}
+section div{
+    background-color:#3f3e3e;
+    position: relative;
+    top: -70px;
+    left: 145px;
+    height: 250px;
+    width: 600px;
+}
+section li{
+    list-style: disc;
+    color: gray;
+}
+section li p{
+    padding-top: 15px;
+    font-size: 20px;
+    color: gray;
+}
+.line2{
+    margin-left: 545px;
+    width:800px;
+    height: 20px;
+    background-color: black;
+    margin-bottom: 100px;
+}
+/*.........Third Section.........*/
+.thirdSection h2{
+    font-size: 50px;
+    margin-left: 300px;
+}
+.about{
+    background-color:#3f3e3e;
+    position: relative;
+    top: -70px;
+    left: 400px;
+    height: 250px;
+    width: 600px;
+    z-index: -1;
+}
+.thirdSection p{
+    padding-left: 40px;
+    padding-top: 50px;
+    font-size: 25px;
+    color: gray;
+    width:550px;
+}
+/*.........Fourth Section.........*/
+.rightImage{
+    position: relative;
+    top: -100px;
+    float: right;
+    width: 500px;
+    height: 600px;
+}
+.mapImage{
+    transform: scaleX(-5);
+}

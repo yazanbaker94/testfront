@@ -1,0 +1,8 @@
+.footer{
+    background-color: rgb(63, 63, 63);
+    position: relative;
+}
+p{
+    padding-left: 50px;
+    display: inline-block;
+}

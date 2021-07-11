@@ -1,0 +1,13 @@
+.mainImage{
+    display: inline-block;
+    position: absolute;
+    top: 0px;
+    width: 70%;
+    height: 550px;
+    z-index: -1;
+    margin-left: 405px;
+}
+h1{
+    margin-top: 250px;
+    margin-bottom: 200px;
+}

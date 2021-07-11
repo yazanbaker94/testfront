@@ -1,0 +1,26 @@
+.mainImage{
+    display: inline-block;
+    position: absolute;
+    top: 0px;
+    width: 70%;
+    height: 550px;
+    z-index: -1;
+    margin-left: 405px;
+}
+h1{
+    margin-top: 150px;
+    margin-bottom: 350px;
+    margin-left: 50px;
+    font-size: 60px;
+}
+h1 span{
+    position: relative;
+    top: 50px;
+    left: -350px;
+    font-size: 20px;
+}
+.line{
+    width:100px;
+    height: 100px;
+    background-color: black;
+}

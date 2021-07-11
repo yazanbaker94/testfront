@@ -1,0 +1,21 @@
+.footer{
+    background-color: rgb(63, 63, 63);
+    /* position: relative;
+    top: 0px; */
+    z-index: 1;
+    width: 90%;
+    height: 65;
+}
+p{
+    padding-left: 50px;
+    display: inline-block;
+    padding-right: 30px;
+    font-size: 20px;
+    margin-right: 100px;
+    color: gray;
+}
+.icon{
+    padding-top: 30px;
+    padding-right:30px;
+    color: gray;
+}
