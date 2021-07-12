@@ -1,13 +1,10 @@
 import React, { Component } from 'react';
 import './Header.css';
-import Home from './Home';
 import { withAuth0 } from '@auth0/auth0-react';
 import Button from 'react-bootstrap/Button'
 
 import {
     BrowserRouter as Router,
-    Route,
-    Switch,
     Link
 } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -22,19 +19,19 @@ class Header extends Component {
         const { user, isAuthenticated } = this.props.auth0;
         console.log(this.props.auth0)
         console.log(user);
-        console.log(isAuthenticated );
+        console.log(isAuthenticated);
         return (
             <div>
                 <Navbar>
-                    
-                        <Link to="/" className="Logo">DivGig</Link>
-                        <Link to="/postwork" className="navBar">Post Work</Link>
-                        <Link to="/findtalent" className="navBar">Find Talent</Link>
-                        <Link to="/contactus" className="navBar">Contact us</Link>
-                        {isAuthenticated ? <Link to="/profile" className="navBar">Profile</Link>: ''}
 
-                        {isAuthenticated ? <LogOutButton/> : <LoginButton/>}
-                   
+
+                    <Link to="/" className="Logo">DivGig</Link>
+                    <Link to="/" className="navBar">Post Work</Link>
+                    <Link to="/findtalent" className="navBar">Find Talent</Link>
+                    <Link to="/contactus" className="navBar">Contact us</Link>
+                    {isAuthenticated ? <Link to="/profile" className="navBar">Profile</Link> : ''}
+                    {isAuthenticated ? <LogOutButton /> : <LoginButton />}
+
                 </Navbar>
             </div>
         )

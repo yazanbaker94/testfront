@@ -5,19 +5,19 @@ import Button from 'react-bootstrap/Button'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Carousel from 'react-bootstrap/Carousel'
-import Col from 'react-bootstrap/Col'
-import Card from 'react-bootstrap/Card'
-import CardGroup from 'react-bootstrap/CardGroup'
+
 import JobModal from './JobModal'
 import Header from './componants/Header'
-
 import axios from 'axios';
 
+import Footer from './componants/Footer';
+import Findtalentcard from './componants/Findtalentcard';
 
 
 class FindTalent extends Component {
     constructor(props) {
     super(props);
+
     this.state={
         show:false,
         jobData:[]
