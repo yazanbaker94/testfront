@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Header from '../componants/Header';
-import Footer from '../componants/Footer';
+// import Footer from '../componants/Footer';
 import './Home.css'
 import { withAuth0 } from '@auth0/auth0-react';
 
@@ -45,7 +45,7 @@ class Home extends Component {
                 </div>
                 <img src='https://www.marwinvalve.com/wp-content/uploads/2018/04/placeholder-rectangle.png' alt='placeHolder' className="rightImage" />
                 <img src='https://ramsdiving.com/images/grey-triangle-f4bb9b363ac88463c997c4598e82946c.png' alt='placeHolder' className="mapImage" />
-                <Footer />
+                {/* <Footer /> */}
             </div>
         )
     }
