@@ -9,6 +9,8 @@ import Col from 'react-bootstrap/Col'
 import Card from 'react-bootstrap/Card'
 import CardGroup from 'react-bootstrap/CardGroup'
 import JobModal from './JobModal'
+import Header from './componants/Header'
+
 import axios from 'axios';
 
 
@@ -55,7 +57,7 @@ class FindTalent extends Component {
             <div>
 
  
-
+          <Header/>
      <JobModal show={this.state.show} hide={this.hideModal} showData={this.state.jobData} />
 
  
