@@ -28,7 +28,7 @@ class Header extends Component {
                 <Navbar>
                     
                         <Link to="/" className="Logo">DivGig</Link>
-                        <Link to="/" className="navBar">Post Work</Link>
+                        <Link to="/postwork" className="navBar">Post Work</Link>
                         <Link to="/findtalent" className="navBar">Find Talent</Link>
                         <Link to="/contactus" className="navBar">Contact us</Link>
                         {isAuthenticated ? <Link to="/profile" className="navBar">Profile</Link>: ''}
