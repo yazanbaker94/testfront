@@ -1,6 +1,12 @@
+import axios from 'axios';
 import React, { Component } from 'react';
-// import { Image } from 'react-bootstrap'
 import './profile.css';
+import Profilecard from './Profilecard';
+// import { Image } from 'react-bootstrap'
+
+import Header from './Header'
+import Findtalent from './Findtalentcard';
+
 
 
 export class Profile extends Component {
@@ -14,6 +20,7 @@ export class Profile extends Component {
             newContact: '',
             newPhone: '',
             newWeb: '',
+            dataformBack: [],
         }
     }
 
@@ -110,12 +117,71 @@ export class Profile extends Component {
 
     }
 
+
+    // componentDidMount = async () => {
+    //     // if (this.props.auth0.isAuthenticated) {
+    //     //   this.props.auth0.getIdTokenClaims()
+    //     //     .then(async(res) => {
+    //     //       const jwt = await res.__raw;
+    //     //       const config = {
+    //     //         headers: { "Authorization": `Bearer ${jwt}`,"Access-Control-Allow-Origin": "*", "Access-Control-Allow-Credentials": true, 'Content-Type': 'application/json', 'mode': 'no-cors' },
+    //     //         method: 'get',
+    //     //         baseURL: 'http://localhost:8080',
+    //     //         url: '/authorize'
+    //     //       }
+    //     //       axios(config)
+    //     //         .then(axiosResults => console.log(axiosResults.data))
+    //     //         .catch(err => console.error(err));
+    //     //     })
+    //     //     .catch(err => console.error(err));
+    //     // }
+
+    //     // let email = this.props.auth0.user.email
+    //     // console.log('email',email)
+    //     const url = `http://localhost:8080/test?email=munther.abdlrahman@gmail.com`;
+    //     axios.get(url).then(response => {
+    //         console.log('previous data', response);
+    //         this.setState({
+    //             dataformBack: response.data
+    //         })
+    //     })
+
+
+    // }
+    postFreelance = (e) => {
+        (e).preventDefault();
+        try {
+            const reqBody = {
+                email: "munther.abdlrahman@gmail.com",
+                name: this.state.newName,
+                skills: this.state.newSkills,
+                bio: this.state.newBio,
+                phone: this.state.newPhone,
+                websiteUrl: this.state.newWeb,
+            }
+
+            const url = `http://localhost:8000/freelance`;
+            axios.post(url, reqBody).then(response => {
+                console.log('new data', response.data);
+                console.log('reqBody', reqBody)
+                this.setState({
+                    dataformBack: response.data
+
+                })
+            })
+        } catch {
+            console.log('error')
+        }
+    }
+
     render() {
         return (
             <>
+            
+                <Header />
                 <h1 >User Info</h1>
                 <section>
-                    <h3 class="" class="nameM" >
+                    <h3 class="nameM" >
                         Name: jhony deep
                     </h3>
                     <h3 id="firstH" class="nameM" >
@@ -146,8 +212,8 @@ export class Profile extends Component {
                         <h3>Work Samples</h3>
                         <br />
                         <br />
-                        <label for="bio">Your Website A :-  </label>
-                        <input required aria-required="true" id="fname" class="input" id="email" name="E-mail" placeholder='Best of  Your website...' onChange={(e) => this.urProjectONchangeA(e)} />
+                        {/* <label for="bio">Your Website A :-  </label>
+                        <input required aria-required="true"id="fname" class="input" id="email" name="E-mail" placeholder='Best of  Your website...' onChange={(e) => this.urProjectONchangeA(e)} />
                         <br />
                         <label for="bio">Your Website B :- </label>
                         <input required aria-required="true" id="fname" class="input" id="email" name="E-mail" placeholder='Best of  Your website...' onChange={(e) => this.urProjectONchangeB(e)} />
@@ -156,8 +222,8 @@ export class Profile extends Component {
                         <input required aria-required="true" id="fname" class="input" id="email" name="E-mail" placeholder='Your GitHub...' onChange={(e) => this.openPrimary(e)} />
                         <br />
                         <label class="label" for="url">Upload Url image for best project :-</label>
-                        <input class="input" id="url_txt" name="Url" type="url" placeholder='Your Img Url...' required onChange={(e) => { this.imageONchange(e) }} />
-                        <br />
+                        <input   class="input" id="url_txt" name="Url" type="url"  placeholder='Your Img Url...' required onChange={(e) => { this.imageONchange(e) }} />
+                        <br /> */}
                         <br />
                         <h3>Contact Info</h3><br />
                         <br />
@@ -168,14 +234,19 @@ export class Profile extends Component {
                         <input required aria-required="true" type="text" id="fname" name="firstname" placeholder="Website Url" onChange={(e) => this.websiteONchange(e)} />
                         <br />
                         <br />
-                        <button>Premote yourself</button>
+                        <button onClick={(e) => this.postFreelance(e)} >Premote yourself</button>
                     </form>
                 </section>
+                {
+                    this.state.dataformBack.map((element, index) => {
+                        return <Profilecard name={element.name} bio={element.bio} skills={element.skills} phone={element.phone} websiteUrl={element.websiteUrl} />
+                    })
+                }
             </>
         )
     }
 }
 
-export default Profile;
+export default Profile
 
 

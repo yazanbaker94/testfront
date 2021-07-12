@@ -2,21 +2,28 @@ import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Button from 'react-bootstrap/Button'
 import Carousel from 'react-bootstrap/Carousel'
-import Card from 'react-bootstrap/Card'
-import CardGroup from 'react-bootstrap/CardGroup'
 import JobModal from './JobModal'
+import Header from './componants/Header'
 import axios from 'axios';
-import Header from './componants/Header';
 import Footer from './componants/Footer';
-
+import Findtalentcard from './componants/Findtalentcard';
 
 class FindTalent extends Component {
   constructor(props) {
     super(props);
     this.state = {
       show: false,
-      jobData: []
+      jobData: [],
+      //fromProfile
+      data:this.dataformBack
+      // email: "munther.abdlrahman@gmail.com",
+      // name: '',
+      // skills:'',
+      // bio:'',
+      // phone:'',
+      // websiteUrl: '',
     }
+    console.log('this.state.data',this.state.data);
   }
 
   dataSubmitHandler = async () => {
@@ -43,10 +50,11 @@ class FindTalent extends Component {
     });
   };
 
+
   render() {
     return (
       <div>
-        <Header/>
+        <Header />
         <JobModal show={this.state.show} hide={this.hideModal} showData={this.state.jobData} />
         <Carousel>
           <Carousel.Item>
@@ -69,29 +77,14 @@ class FindTalent extends Component {
         <br></br>
 
         <h1 style={{ textAlign: 'center' }}>Our Freelancers</h1>
+        <h1></h1>
+        {/* {
+          this.state.data.map((element)=>{
+            return <Findtalentcard newName={this.props.name}/>
+          })
+        } */}
 
-        <CardGroup>
-          <Card border="primary" style={{ width: '30px', display:'inline-block',marginBottom:'200px'}}>
-            <Card.Img variant="top" src="https://marketifythemes.com/html/waxon/img/about/2.jpg" style={{width:'200px', marginTop:'35px',marginLeft:'20px'}}/>
-            <Card.Body style={{height:'400px'}}>
-              <Card.Title style={{ marginTop:'60px'}}>Name:</Card.Title>
-              <Card.Title style={{ marginTop:'60px'}}>Bio:</Card.Title>
-              <Card.Title style={{position:"absolute",top:'30px',left:'300px'}}>Skills:</Card.Title>
-              <Card.Title style={{position:"absolute",top:'100px',left:'300px'}}>Work Samples:</Card.Title>
-              <Card.Img variant="top" src="https://marketifythemes.com/html/waxon/img/about/2.jpg" style={{width:'200px', marginTop:'20px',marginLeft:'0px',position:"absolute",top:'150px',left:'300px'}} />
-              <Card.Img variant="top" src="https://marketifythemes.com/html/waxon/img/about/2.jpg" style={{width:'200px', marginTop:'20px',marginLeft:'200px',position:"absolute",top:'150px',left:'400px'}}/>
-              <Card.Img variant="top" src="https://marketifythemes.com/html/waxon/img/about/2.jpg" style={{width:'200px', marginTop:'20px',marginLeft:'400px',position:"absolute",top:'150px',left:'500px'}}/>
-              <Card.Title style={{position:"absolute",top:'400px',left:'300px'}}>Contact Info</Card.Title>
-              <Card.Title style={{position:"absolute",top:'500px',left:'300px'}}>Phone:</Card.Title>
-              <Card.Title style={{position:"absolute",top:'500px',left:'700px'}}>WebsiteUrl:</Card.Title>
-              <Card.Text>
-              </Card.Text>
-            </Card.Body>
-            <Card.Footer>
-            </Card.Footer>
-          </Card>
-        </CardGroup>
-        <Footer/>
+        <Footer />
       </div>
     )
   }
