@@ -9,6 +9,8 @@ import Carousel from 'react-bootstrap/Carousel'
 import JobModal from './JobModal'
 import Header from './componants/Header'
 import axios from 'axios';
+import Card from 'react-bootstrap/Card'
+import CardGroup from 'react-bootstrap/CardGroup'
 
 import Footer from './componants/Footer';
 import Findtalentcard from './componants/Findtalentcard';

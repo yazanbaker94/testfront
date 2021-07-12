@@ -17,17 +17,17 @@ import Form from 'react-bootstrap/Form'
         <Form>
   <Form.Group controlId="exampleForm.ControlInput1">
     <Form.Label>Company Name</Form.Label>
-    <Form.Control type="text" placeholder="Company Name" />
+    <Form.Control type="text" placeholder="Company Name" onChange={(e) => this.props.nameOnChange(e)} />
     <Form.Label>Job Title</Form.Label>
-    <Form.Control type="text" placeholder="Company Name" />
+    <Form.Control type="text" placeholder="Job Title"  onChange={(e) => this.props.jobTitleChange(e)}/>
   </Form.Group>
   <Form.Group controlId="exampleForm.ControlTextarea1">
     <Form.Label>Description</Form.Label>
-    <Form.Control as="textarea" rows={3} />
+    <Form.Control as="textarea" rows={3}  onChange={(e) => this.props.descriptionChange(e)}/>
   </Form.Group>
 </Form>
 
-<Button variant="primary" type="submit">
+<Button variant="primary" type="submit" onClick={(e) => this.props.postJob(e)}>
     Submit
   </Button>
         </Modal.Body>
