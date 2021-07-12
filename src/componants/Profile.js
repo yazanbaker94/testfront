@@ -1,9 +1,15 @@
 import axios from 'axios';
 import React, { Component } from 'react'
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Card from 'react-bootstrap/Card'
 import CardGroup from 'react-bootstrap/CardGroup'
 import'./profile.css'
+
+// import { Image } from 'react-bootstrap'
+
+import Header from './Header'
+
 
 
 export class Profile extends Component {
@@ -199,7 +205,11 @@ export class Profile extends Component {
 
     render() {
         return (
+
+        
             <>
+
+<Header/>
                 <h1 >User Info</h1>
                 <section>
                     <h3 class="" class="nameM" >
