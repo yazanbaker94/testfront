@@ -5,6 +5,8 @@ import Carousel from 'react-bootstrap/Carousel'
 import Card from 'react-bootstrap/Card'
 import CardGroup from 'react-bootstrap/CardGroup'
 import JobModal from './JobModal'
+import Header from './componants/Header'
+
 import axios from 'axios';
 import Header from './componants/Header';
 // import Footer from './componants/Footer';
@@ -81,10 +83,13 @@ class FindTalent extends Component {
         
 
      
+
         {/* <Footer/> */}
       </div>
     )
   }
-}
+
+  
+      
 
 export default FindTalent;
