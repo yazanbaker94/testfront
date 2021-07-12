@@ -7,12 +7,13 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Card from 'react-bootstrap/Card'
 import CardGroup from 'react-bootstrap/CardGroup'
-
+import Header from './componants/Header'
 
 class ContactUs extends Component {
     render() {
         return (
             <div>
+              <Header/>
                 <Jumbotron fluid>
   <Container>
     <h1 style={{textAlign:'center'}}>    Contact Us  </h1>

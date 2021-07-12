@@ -8,15 +8,21 @@ import {
   Switch,
   Route
 } from "react-router-dom";
+import { withAuth0 } from '@auth0/auth0-react';
+
 
 export class App extends Component {
   render() {
+    const { user, isAuthenticated } = this.props.auth0;
+    console.log(this.props.auth0)
+    console.log(user);
+    console.log(isAuthenticated );
     return (
       <>
         <Router>
             <Switch>
             <Route exact path="/">
-            <Home/>
+             <Home/> 
               </Route>
               <Route exact path="/profile">
             <Profile/>
@@ -27,6 +33,7 @@ export class App extends Component {
               <Route exact path="/contactus">
                 <ContactUs/>
               </Route>    
+            
             </Switch>
         </Router>
       </>
@@ -34,4 +41,4 @@ export class App extends Component {
   }
 }
 
-export default App
+export default withAuth0(App)

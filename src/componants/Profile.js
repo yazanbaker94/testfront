@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 // import { Image } from 'react-bootstrap'
 import profile from './profile.css'
+import Header from './Header'
 
 
 export class Profile extends Component {
@@ -127,7 +128,11 @@ export class Profile extends Component {
 
     render() {
         return (
+
+        
             <>
+
+<Header/>
                 <h1 >User Info</h1>
                 <section>
                     <h3 class="" class="nameM" >
