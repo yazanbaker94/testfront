@@ -24,6 +24,7 @@ class Header extends Component {
             <div>
                 <Navbar>
 
+
                     <Link to="/" className="Logo">DivGig</Link>
                     <Link to="/" className="navBar">Post Work</Link>
                     <Link to="/findtalent" className="navBar">Find Talent</Link>
