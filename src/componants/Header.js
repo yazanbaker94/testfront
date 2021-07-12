@@ -1,12 +1,9 @@
 import React, { Component } from 'react';
 import './Header.css';
-import Home from './Home';
 import { withAuth0 } from '@auth0/auth0-react';
 
 import {
     BrowserRouter as Router,
-    Route,
-    Switch,
     Link
 } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -20,8 +17,8 @@ class Header extends Component {
                     <Router>
                         <Link to="/" className="Logo">DivGig</Link>
                         <Link to="/" className="navBar">Post Work</Link>
-                        <Link to="/" className="navBar">Find Talent</Link>
-                        <Link to="/" className="navBar">Contact Us</Link>
+                        <Link to="/findtalent" className="navBar">Find Talent</Link>
+                        <Link to="/contactus" className="navBar">Contact Us</Link>
                         <Link to="/" className="logIn">Log in</Link>
                     </Router>
                 </Navbar>

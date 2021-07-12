@@ -1,6 +1,6 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 // import { Image } from 'react-bootstrap'
-import profile from './profile.css'
+import './profile.css';
 
 
 export class Profile extends Component {
@@ -14,10 +14,6 @@ export class Profile extends Component {
             newContact: '',
             newPhone: '',
             newWeb: '',
-
-
-
-
         }
     }
 
@@ -26,7 +22,7 @@ export class Profile extends Component {
         this.setState({
             newName: e.target.value
         })
-           console.log('newName',e.target.value)
+        console.log('newName', e.target.value)
     }
     SkillsONchange = (e) => {
         (e).preventDefault();
@@ -81,7 +77,7 @@ export class Profile extends Component {
         this.setState({
             urProjectB: e.target.value
         })
-           console.log('urProject B',e.target.value)
+        console.log('urProject B', e.target.value)
     }
 
     urProjectONchangeC = (e) => {
@@ -89,7 +85,7 @@ export class Profile extends Component {
         this.setState({
             urProjectC: e.target.value
         })
-           console.log('urProject C',e.target.value)
+        console.log('urProject C', e.target.value)
     }
 
     imageONchange = (e) => {
@@ -110,20 +106,9 @@ export class Profile extends Component {
     }
     onclickPrimaryPro = (e) => {
         (e).preventDefault();
-
         window.location.href = "http://localhost:3000/Profile";
 
     }
-
-
-
-
-
-
-
-
-
-
 
     render() {
         return (
@@ -137,7 +122,6 @@ export class Profile extends Component {
                         Email:zxy@mail.com
                     </h3>
                     <img class="ImgH" src="https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308458-stock-illustration-unknown-person-silhouette-profile-picture.jpg" alt="person" />
-
                 </section>
                 <br />
                 <br />
@@ -163,16 +147,16 @@ export class Profile extends Component {
                         <br />
                         <br />
                         <label for="bio">Your Website A :-  </label>
-                        <input required aria-required="true"id="fname" class="input" id="email" name="E-mail" placeholder='Best of  Your website...' onChange={(e) => this.urProjectONchangeA(e)} />
+                        <input required aria-required="true" id="fname" class="input" id="email" name="E-mail" placeholder='Best of  Your website...' onChange={(e) => this.urProjectONchangeA(e)} />
                         <br />
                         <label for="bio">Your Website B :- </label>
-                        <input required aria-required="true"id="fname" class="input" id="email" name="E-mail" placeholder='Best of  Your website...' onChange={(e) => this.urProjectONchangeB(e)} />
+                        <input required aria-required="true" id="fname" class="input" id="email" name="E-mail" placeholder='Best of  Your website...' onChange={(e) => this.urProjectONchangeB(e)} />
                         <br />
                         <label for="bio">Your Website C :-  </label>
                         <input required aria-required="true" id="fname" class="input" id="email" name="E-mail" placeholder='Your GitHub...' onChange={(e) => this.openPrimary(e)} />
                         <br />
                         <label class="label" for="url">Upload Url image for best project :-</label>
-                        <input   class="input" id="url_txt" name="Url" type="url"  placeholder='Your Img Url...' required onChange={(e) => { this.imageONchange(e) }} />
+                        <input class="input" id="url_txt" name="Url" type="url" placeholder='Your Img Url...' required onChange={(e) => { this.imageONchange(e) }} />
                         <br />
                         <br />
                         <h3>Contact Info</h3><br />
@@ -192,23 +176,6 @@ export class Profile extends Component {
     }
 }
 
-export default Profile
+export default Profile;
 
-
-
-
-
-
-
-
-
-
- {/* <a  onChange={(e) => this.websiteONchange(e)}>
-                            <button onclick="window.open(document.URL, '_blank', 'location=yes,height=570,width=520,scrollbars=yes,status=yes');" onClick={this.onclickPrimaryPro(e)}>
-                            Your primary profiles
-                            </button>
-                        </a> */}
-
-
-                        {/* <a href="http://localhost:3000/Profile" target="_blank">Grep!</a> */}
 
