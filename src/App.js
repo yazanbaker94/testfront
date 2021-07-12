@@ -9,6 +9,7 @@ import {
   Route
 } from "react-router-dom";
 import { withAuth0 } from '@auth0/auth0-react';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 export class App extends Component {
@@ -32,8 +33,7 @@ export class App extends Component {
               </Route>    
               <Route exact path="/contactus">
                 <ContactUs/>
-              </Route>    
-            
+              </Route>               
             </Switch>
         </Router>
       </>
@@ -41,4 +41,4 @@ export class App extends Component {
   }
 }
 
-export default withAuth0(App)
+export default withAuth0(App);
