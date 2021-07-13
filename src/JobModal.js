@@ -19,6 +19,7 @@ class JobModal extends Component {
             <Modal.Title style={{ textAlign: 'center' }}>Apply to Jobs From Around The World</Modal.Title>
           </Modal.Header>
           <Modal.Body>
+            
             {this.props.showData.map(item => {
 
               return <CardDeck>
@@ -29,7 +30,7 @@ class JobModal extends Component {
                     <Card.Text>
                       Company Name: {item.company_name} <br></br>
                       Job Type: {item.job_type}<br></br>
-                      <a href={item.url}>Apply</a>
+                      <Button href={item.url}>Apply</Button>
                     </Card.Text>
                   </Card.Body>
                   <Card.Footer>
