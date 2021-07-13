@@ -25,13 +25,16 @@ class Header extends Component {
                 <Navbar>
 
 
-                    <Link to="/" className="Logo">DivGig</Link>
+                    <Link to="/"> <img src='/logo.png' alt='logo' className="Logo"/></Link>
+                   
                     <Link to="/postwork" className="navBar">Posted Jobs</Link>
+
                     <Link to="/findtalent" className="navBar">Find Talent</Link>
-                    <Link to="/contactus" className="navBar">Contact us</Link>
+                    <Link to="/contactus" className="navBar">Contact Us</Link>
                     {isAuthenticated ? <Link to="/profile" className="navBar">Profile</Link> : ''}
-                    {isAuthenticated ? <LogOutButton /> : <LoginButton />}
-                    
+
+                    {isAuthenticated ? <LogOutButton  className='logIn'/> : <LoginButton  />}
+
 
                 </Navbar>
             </div>

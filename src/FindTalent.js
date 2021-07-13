@@ -13,12 +13,12 @@ import Card from 'react-bootstrap/Card'
 import CardGroup from 'react-bootstrap/CardGroup'
 
 import Footer from './componants/Footer';
-import Findtalentcard from './componants/Findtalentcard';
 
 
 class FindTalent extends Component {
     constructor(props) {
     super(props);
+
 
     this.state={
         show:false,
@@ -120,6 +120,7 @@ class FindTalent extends Component {
             </div>
         )
     }
+
 }
 
 export default FindTalent

@@ -2,10 +2,9 @@ import axios from 'axios';
 import React, { Component } from 'react';
 import './profile.css';
 import Profilecard from './Profilecard';
-// import { Image } from 'react-bootstrap'
-
 import Header from './Header'
-import Findtalent from './Findtalentcard';
+import Findtalentcard from "./Findtalentcard"
+
 
 
 
@@ -177,7 +176,7 @@ export class Profile extends Component {
     render() {
         return (
             <>
-            
+
                 <Header />
                 <h1 >User Info</h1>
                 <section>
@@ -239,7 +238,14 @@ export class Profile extends Component {
                 </section>
                 {
                     this.state.dataformBack.map((element, index) => {
-                        return <Profilecard name={element.name} bio={element.bio} skills={element.skills} phone={element.phone} websiteUrl={element.websiteUrl} />
+                        return <> <Profilecard name={element.name} bio={element.bio} skills={element.skills} phone={element.phone} websiteUrl={element.websiteUrl} />
+                        </>
+                    })
+                }
+                {
+                    this.state.dataformBack.map((element, index) => {
+                        return <> <Findtalentcard name={element.name} bio={element.bio} skills={element.skills} phone={element.phone} websiteUrl={element.websiteUrl} />
+                        </>
                     })
                 }
             </>
