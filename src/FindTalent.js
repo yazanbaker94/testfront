@@ -14,24 +14,37 @@ import CardGroup from 'react-bootstrap/CardGroup'
 
 import Footer from './componants/Footer';
 
+// import Findtalentcard from './componants/Findtalentcard';
+import Profilecard from './componants/Profilecard';
+import Updateform from './componants/Updateform';
+import { withAuth0 } from '@auth0/auth0-react';
+
+
 
 class FindTalent extends Component {
   constructor(props) {
     super(props);
 
-
     this.state = {
       show: false,
-      jobData: []
+      jobData: [],
+      //fromProfile
+      dataformBack:[],
+      // email: "munther.abdlrahman@gmail.com",
+      name: '',
+      skills:'',
+      bio:'',
+      phone:'',
+      websiteUrl: '',
+      freelanceData:[]
+
+
     }
+    console.log('this.state.data',this.state.data);
   }
 
-
-
   dataSubmitHandler = async () => {
-
-
-    const axiosResponse = await axios.get(`http://localhost:3001/findJobs`)
+    const axiosResponse = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/findJobs`)
     console.log(axiosResponse)
 
     this.setState({
@@ -39,6 +52,19 @@ class FindTalent extends Component {
     })
 
   }
+
+
+  dataSubmitfreelance = async () => {
+    const axiosResponse = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/Notifies`)
+    console.log(axiosResponse)
+
+    this.setState({
+      freelanceData: axiosResponse.data,
+
+    })
+
+  }
+
 
 
   showModal = () => {
@@ -49,26 +75,22 @@ class FindTalent extends Component {
   };
 
   hideModal = () => {
+
+    this.dataSubmitfreelance()
+
     this.setState({
       show: false
     });
   };
 
+
+
   render() {
     return (
       <div>
-
-
         <Header />
         <JobModal show={this.state.show} hide={this.hideModal} showData={this.state.jobData} />
-
-
-
-
-
-
-
-
+        <Updateform/>
         <Carousel>
           <Carousel.Item>
 
@@ -95,32 +117,24 @@ class FindTalent extends Component {
 
         <h1 style={{ textAlign: 'center' }}>Our Freelancers</h1>
 
-        <CardGroup>
+        <h1></h1>
+        {
+              
 
-          <Card>
+           this.state.freelanceData.map((element, index) => {
+            return <>
+            <Profilecard name={element.name} bio={element.bio} skills={element.skills} phone={element.phone} websiteUrl={element.websiteUrl} />
+            </>
+           
+        })
+      }
 
-            <Card.Img variant="top" src="https://marketifythemes.com/html/waxon/img/about/2.jpg" />
-            <Card.Body>
-              <Card.Title>Ahmad Ahmad</Card.Title>
-              <Card.Text>
-                Work: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                <br></br>
-                <br></br>
-
-                Contact: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </Card.Text>
-            </Card.Body>
-            <Card.Footer>
-              <small className="text-muted">Last updated 3 mins ago</small>
-            </Card.Footer>
-          </Card>
-        </CardGroup>
-
-
+        <Footer />
       </div>
     )
   }
 
 }
 
-export default FindTalent
+export default withAuth0(FindTalent);
+
