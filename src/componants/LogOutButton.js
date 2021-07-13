@@ -1,12 +1,13 @@
 import React from "react";
 import { useAuth0 } from "@auth0/auth0-react";
 import { withAuth0 } from '@auth0/auth0-react';
+import './Header.css';
 import Button from 'react-bootstrap/Button'
 const LogoutButton = () => {
   const { logout } = useAuth0();
 
   return (
-    <Button variant="success" onClick={() => logout({ returnTo: window.location.origin })}>
+    <Button variant="outline-secondary" className='logIn' onClick={() => logout({ returnTo: window.location.origin })}>
       Log Out
     </Button>
   );

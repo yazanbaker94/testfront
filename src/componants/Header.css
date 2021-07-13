@@ -1,27 +1,34 @@
 .navBar{
+    margin-top: 10px;
     display: inline-block;
     margin-right: 50px;
-    text-decoration: none;
-    color: black;
-    font-size: 20px;
+    color: #434f4d;
+    font-size: 25px;
     font-weight: bold;
-    font-family:'Courier New', Courier, monospace;
+    font-family:Arial, Helvetica, sans-serif;
+    word-spacing: 5px;
+}
+.navBar:hover{
+    
+    text-decoration: none;
+    font-weight: bold;
+    font-family:Arial, Helvetica, sans-serif;
+    color: #f2a16f;
 }
 .Logo{
-    font-size: 20px;
-    font-weight: bold;
-    font-family: cursive;
-    margin-right: 300px;
-    margin-left: 30px;
-    text-decoration: none;
-    color: black;
+    width: 60px;
+    margin-top: 20px;
+    margin-right: 275px;
+    margin-left: 50px;
 }
 
 .logIn{
+    margin-top: 20px;
     font-size: 20px;
     font-weight: bold;
-    font-family: cursive;
-    margin-left: 300px;
+    font-family:Arial, Helvetica, sans-serif;
+    margin-left: 200px;
     text-decoration: none;
-    color: black;
+    color: #434f4d;
+    border-width: 1px;
 }

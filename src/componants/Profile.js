@@ -2,10 +2,12 @@ import axios from 'axios';
 import React, { Component } from 'react';
 import './profile.css';
 import Profilecard from './Profilecard';
+
 import { Button } from 'react-bootstrap';
 import Modelformforupdate from './Modelformforupdate';
 import Header from './Header';
 // import Findtalent from './Findtalentcard';
+
 
 
 
@@ -354,12 +356,14 @@ export class Profile extends Component {
                 </section>
                 {
                     this.state.dataformBack.map((element, index) => {
+
                         return <>
                             <Profilecard name={element.name} bio={element.bio} skills={element.skills} phone={element.phone} websiteUrl={element.websiteUrl} />
                             <Button variant="danger" onClick={() => this.deleteFreelance(index)}>Delete</Button>
                             <Button  variant="warning" onClick={() =>this.showUpdateForm (index)} class='button'> Freelance User Selector</Button>  
 
                         </>
+
 
                     })
                 }

@@ -1,20 +1,30 @@
 import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Image from 'react-bootstrap/Image'
 import Button from 'react-bootstrap/Button'
+import Container from 'react-bootstrap/Container'
+import Row from 'react-bootstrap/Row'
 import Carousel from 'react-bootstrap/Carousel'
+
 import JobModal from './JobModal'
 import Header from './componants/Header'
 import axios from 'axios';
+import Card from 'react-bootstrap/Card'
+import CardGroup from 'react-bootstrap/CardGroup'
+
 import Footer from './componants/Footer';
+
 // import Findtalentcard from './componants/Findtalentcard';
 import Profilecard from './componants/Profilecard';
 import Updateform from './componants/Updateform';
 import { withAuth0 } from '@auth0/auth0-react';
 
 
+
 class FindTalent extends Component {
-  constructor(props) {
+    constructor(props) {
     super(props);
+
     this.state = {
       show: false,
       jobData: [],
@@ -120,3 +130,4 @@ class FindTalent extends Component {
 }
 
 export default withAuth0(FindTalent);
+

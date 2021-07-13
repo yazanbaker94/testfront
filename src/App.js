@@ -3,6 +3,7 @@ import FindTalent from './FindTalent'
 import ContactUs from './ContactUs'
 import Home from './componants/Home';
 import Profile from './componants/Profile'
+import PostWork from './componants/PostWork'
 import {
   BrowserRouter as Router,
   Switch,
@@ -10,6 +11,7 @@ import {
 } from "react-router-dom";
 import { withAuth0 } from '@auth0/auth0-react';
 import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 
 export class App extends Component {
@@ -27,6 +29,9 @@ export class App extends Component {
               </Route>
               <Route exact path="/profile">
             <Profile/>
+              </Route>
+              <Route exact path="/postwork">
+            <PostWork/>
               </Route>
               <Route exact path="/findtalent">
                 <FindTalent />
