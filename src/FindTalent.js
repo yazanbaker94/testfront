@@ -6,7 +6,6 @@ import JobModal from './JobModal'
 import Header from './componants/Header'
 import axios from 'axios';
 import Footer from './componants/Footer';
-import Findtalentcard from './componants/Findtalentcard';
 
 class FindTalent extends Component {
   constructor(props) {
@@ -15,15 +14,9 @@ class FindTalent extends Component {
       show: false,
       jobData: [],
       //fromProfile
-      data:this.dataformBack
-      // email: "munther.abdlrahman@gmail.com",
-      // name: '',
-      // skills:'',
-      // bio:'',
-      // phone:'',
-      // websiteUrl: '',
+      dataformBack:[],
+      name:''
     }
-    console.log('this.state.data',this.state.data);
   }
 
   dataSubmitHandler = async () => {
@@ -50,7 +43,17 @@ class FindTalent extends Component {
     });
   };
 
-
+  getRequest = async ()=>{
+    let email = this.props.auth0.user.email;
+    console.log('email',email);
+    const url = `http://localhost:8000/freelance?email=munther.abdlrahman@gmail.com`;
+    axios.get(url).then(response =>{
+      console.log('previous data',response);
+      this.setState({
+        dataformBack:response.data.name
+      })
+    })
+  }
   render() {
     return (
       <div>
@@ -77,13 +80,15 @@ class FindTalent extends Component {
         <br></br>
 
         <h1 style={{ textAlign: 'center' }}>Our Freelancers</h1>
-        <h1></h1>
-        {/* {
-          this.state.data.map((element)=>{
-            return <Findtalentcard newName={this.props.name}/>
+        <h1>name:{this.state.dataformBack}</h1>
+        {
+          this.state.dataformBack.map((element)=>{
+            return<>
+            <h1>Name:{element.name}</h1>
+            <h1>skills:{element.skills}</h1>
+            </>
           })
-        } */}
-
+        }
         <Footer />
       </div>
     )
