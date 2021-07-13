@@ -1,11 +1,12 @@
-import React, { Component } from 'react';
-import './Footer.css';
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { 
-    faFacebook,
-    faInstagram,
-    faTwitter
- } from "@fortawesome/free-brands-svg-icons";
+// import React, { Component } from 'react';
+// import './Footer.css';
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { 
+//     faFacebook,
+//     faInstagram,
+//     faTwitter
+//  } from "@fortawesome/free-brands-svg-icons";
+
 
 
 class Footer extends Component {
@@ -22,4 +23,5 @@ class Footer extends Component {
     }
 }
 
-export default Footer
+
+// export default Footer
