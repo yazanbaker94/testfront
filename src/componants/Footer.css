@@ -10,20 +10,21 @@
 }
 .paragraph{
     clear: both;
-    padding-left: 40px;
     display: inline-block;
-    padding-right: 30px;
+    /* padding-right: 30px; */
+    padding-left: 30px;
     font-size: 25px;
-    margin-right:65px;
+    margin-left:100px;
     color: black;
-    position: relative;
-    /* top: -10px; */
     color: #f2a16f;
 }
 .icon{
+    position: relative;
+    top: 10px;
+    left: 350px;
     clear: both;
-    padding-top: 10px;
-    padding-right:10px;
+    /* padding-top: 10px; */
+    padding-right:15px;
     color: black;
     color: #f2a16f;
 }
