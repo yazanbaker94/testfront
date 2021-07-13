@@ -16,7 +16,7 @@ import { withAuth0 } from '@auth0/auth0-react';
             newCompanyName: '',
             newJobTitle: '',
             newDescription: '',
-            dataformBack: [],
+            jobsData: [],
          
         }
         }
@@ -60,6 +60,18 @@ import { withAuth0 } from '@auth0/auth0-react';
               });
           };
 
+          componentDidMount = async () => {
+          
+        
+            const jobsData = await axios.get(`http://localhost:3001/jobs?email=softwaredohanow@gmail.com`);
+            console.log('book data exists!', jobsData.data);
+            console.log('book data exists!', jobsData.data.email);
+            this.setState({
+                jobsData: jobsData.data
+            });
+          };
+
+
           postJob = (e) => {
             (e).preventDefault();
             const { user } = this.props.auth0;
@@ -78,7 +90,7 @@ import { withAuth0 } from '@auth0/auth0-react';
                     console.log('new data', response.data);
                     console.log('reqBody', reqBody)
                     this.setState({
-                        dataformBack: response.data
+                        jobsData: response.data
     
                     })
                 })
@@ -97,16 +109,16 @@ import { withAuth0 } from '@auth0/auth0-react';
 
 
            
-{console.log(this.state.dataformBack)}
-{
 
-this.state.dataformBack.map(element => {
-return (
+
+
+
+
 <CardGroup>
 <Card>
   <Card.Img variant="top" src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=752&q=80" />
   <Card.Body>
-    <Card.Title>{element.companyName}</Card.Title>
+    <Card.Title>x</Card.Title>
     <Card.Text>
       This is a wider card with supporting text below as a natural lead-in to
       additional content. This content is a little bit longer.
@@ -119,10 +131,10 @@ return (
 </CardGroup>
 
  
-)
 
 
-})
+
+
     }
 
 
