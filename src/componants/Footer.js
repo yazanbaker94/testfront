@@ -1,6 +1,7 @@
 
 
 
+
 // import React, { Component } from 'react';
 // import './Footer.css';
 
@@ -10,6 +11,7 @@
 //     faInstagram,
 //     faTwitter
 //  } from "@fortawesome/free-brands-svg-icons";
+
 
 
 
@@ -30,4 +32,4 @@ class Footer extends Component {
 }
 
 
-// export default Footer
+export default Footer

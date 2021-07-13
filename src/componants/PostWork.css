@@ -1,0 +1,119 @@
+.headerImage{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    z-index: -1;
+}
+.image1{
+    width: 500px;
+    margin-left: 50px;
+}
+.headline{
+    position: relative;
+    top: -130px;
+    font-size: 50px;
+    color: #6293a6;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.addJob{
+    position: absolute;
+    top: 550px;
+    background-color: #f2a16f;
+    border: 1px solid #f2a16f;
+    width: 300px;
+    height: 50px;
+    margin-left: 90px;
+    font-size: 25px;
+    color: #6293a6;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+.addJob:hover{
+    background-color: #f2a16f;
+    border: 1px solid #f2a16f;
+}
+.line3{
+    position: relative;
+    top: -250px;
+    width:1000px;
+    height: 10px;
+    background-color: #434f4d;
+}
+
+/*...............Card......*/
+.cardGroup{
+    position: relative;
+    top: -150px;
+    display: block;
+    width:1000px;
+    margin-bottom: 100px;
+    border: solid black 2px;
+    border-radius: 20px;
+    background-color: #d0cecd;
+    margin-left: 170px;
+}
+.card{
+    border: none;
+    background-color: #d0cecd;
+    border-radius: 20px;
+
+}
+.cardBody{
+    display: block;
+    width: 50px;
+    height: 200px;
+    border-radius: 20px;
+}
+.cardImage{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 300px;
+    /* background-color: white;
+    border-radius: 20px; */
+}
+.cardJob{
+    position: absolute;
+    top: 50px;
+    left: 350px;
+    font-size: 20px;
+}
+.carddesc{
+    position: absolute;
+    top: 100px;
+    left: 350px;
+    font-size: 20px;
+}
+.removeJob{
+    margin-top: 20px;
+    margin-left: 750px;
+    background-color: #f2a16f;
+    border: 1px solid #f2a16f;
+    border-radius: 5px;
+    color: #474646;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 150px;
+}
+.removeJob:hover{
+    background-color: #f2a16f;
+    border: 1px solid #f2a16f;
+}
+.jobSelect{
+    margin-top: 50px;
+    margin-left: 750px;
+    background-color: #f2a16f;
+    border: 1px solid #f2a16f;
+    border-radius: 5px;
+    color: #474646;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 150px;
+}
+.jobSelect:hover{
+    background-color: #f2a16f;
+    border: 1px solid #f2a16f;
+    color: white;
+}

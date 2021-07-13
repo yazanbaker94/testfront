@@ -22,7 +22,7 @@ import { withAuth0 } from '@auth0/auth0-react';
 
 
 class FindTalent extends Component {
-    constructor(props) {
+  constructor(props) {
     super(props);
 
     this.state = {
@@ -37,6 +37,7 @@ class FindTalent extends Component {
       phone:'',
       websiteUrl: '',
       freelanceData:[]
+
 
     }
     console.log('this.state.data',this.state.data);
@@ -59,13 +60,10 @@ class FindTalent extends Component {
 
     this.setState({
       freelanceData: axiosResponse.data,
+
     })
 
   }
-
-
-
-
 
 
 
@@ -77,11 +75,14 @@ class FindTalent extends Component {
   };
 
   hideModal = () => {
+
     this.dataSubmitfreelance()
+
     this.setState({
       show: false
     });
   };
+
 
 
   render() {
@@ -92,25 +93,30 @@ class FindTalent extends Component {
         <Updateform/>
         <Carousel>
           <Carousel.Item>
+
             <img
               className="d-block w-100"
               src="https://image.freepik.com/free-photo/top-view-person-writing-laptop-with-copy-space_23-2148708035.jpg"
               alt="First slide"
             />
+
             <Carousel.Caption>
               <Button style={{
                 position: 'relative',
                 bottom: '300px',
                 left: '300px'
               }} variant="outline-success" size="lg" onClick={this.showModal} > Find a Job</Button>{' '}
+
             </Carousel.Caption>
           </Carousel.Item>
+
         </Carousel>
 
         <br></br>
         <br></br>
 
         <h1 style={{ textAlign: 'center' }}>Our Freelancers</h1>
+
         <h1></h1>
         {
               
@@ -127,6 +133,7 @@ class FindTalent extends Component {
       </div>
     )
   }
+
 }
 
 export default withAuth0(FindTalent);

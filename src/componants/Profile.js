@@ -3,10 +3,12 @@ import React, { Component } from 'react';
 import './profile.css';
 import Profilecard from './Profilecard';
 
+
 import { Button } from 'react-bootstrap';
 import Modelformforupdate from './Modelformforupdate';
 import Header from './Header';
 // import Findtalent from './Findtalentcard';
+
 
 
 
@@ -216,7 +218,9 @@ export class Profile extends Component {
                 websiteUrl: this.state.newWeb,
             }
 
+
             const url = `http://localhost:8000/userfreelance`;
+
             axios.post(url, reqBody).then(response => {
                 console.log('new data', response.data);
                 console.log('reqBody', reqBody)
@@ -289,6 +293,7 @@ export class Profile extends Component {
             <>
 
                 <Header />
+
                 <Modelformforupdate nameONchange={this.nameONchange}  SkillsONchange={this.SkillsONchange} BioONchange={this.BioONchange}  phoneONchange={this.phoneONchange} websiteONchange={this.websiteONchange}  
                 skills={this.state.newSkills} bio={this.state.newBio} phone={this.state.newPhone} websiteUrl={this.state.newWeb} updateFreelance={this.updateFreelance}/>
 
@@ -305,6 +310,7 @@ export class Profile extends Component {
                     </h3>
                     <img class="ImgH" src="https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308458-stock-illustration-unknown-person-silhouette-profile-picture.jpg" alt="person" />
                 </section>
+
                 <br />
                 <br />
                 <br />
@@ -374,6 +380,6 @@ export class Profile extends Component {
     }
 }
 
-export default Profile
+export default withAuth0(Profile)
 
 
