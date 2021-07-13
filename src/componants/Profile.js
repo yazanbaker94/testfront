@@ -4,6 +4,7 @@ import './profile.css';
 import Profilecard from './Profilecard';
 import Header from './Header'
 import Findtalentcard from "./Findtalentcard"
+import { withAuth0 } from '@auth0/auth0-react';
 
 
 
@@ -159,7 +160,7 @@ export class Profile extends Component {
                 websiteUrl: this.state.newWeb,
             }
 
-            const url = `http://localhost:8000/freelance`;
+            const url = `http://localhost:3001/freelance`;
             axios.post(url, reqBody).then(response => {
                 console.log('new data', response.data);
                 console.log('reqBody', reqBody)
@@ -178,16 +179,22 @@ export class Profile extends Component {
             <>
 
                 <Header />
-                <h1 >User Info</h1>
-                <section>
-                    <h3 class="nameM" >
-                        Name: jhony deep
-                    </h3>
-                    <h3 id="firstH" class="nameM" >
-                        Email:zxy@mail.com
-                    </h3>
-                    <img class="ImgH" src="https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308458-stock-illustration-unknown-person-silhouette-profile-picture.jpg" alt="person" />
-                </section>
+                {
+                    this.props.auth0.isAuthenticated &&
+                    <>
+                        <h1 >User Info</h1>
+                        <section>
+                            <h3 class="nameM" >
+                                Name: {this.props.auth0.user.name}
+                            </h3>
+                            <h3 id="firstH" class="nameM" >
+                                Email: {this.props.auth0.user.email}
+                            </h3>
+                            <img class="ImgH" src={this.props.auth0.user.picture} alt={this.props.auth0.user.name} />
+                        </section>
+                    </>
+                }
+
                 <br />
                 <br />
                 <br />
@@ -253,6 +260,6 @@ export class Profile extends Component {
     }
 }
 
-export default Profile
+export default withAuth0(Profile)
 
 

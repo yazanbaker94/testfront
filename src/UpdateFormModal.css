@@ -1,0 +1,18 @@
+.updateJob{
+    position: absolute;
+    top: 550px;
+    background-color: #f2a16f;
+    border: 1px solid #f2a16f;
+    width: 300px;
+    height: 50px;
+    margin-left: 500px;
+    font-size: 25px;
+    color: #6293a6;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.updateJob:hover{
+    background-color: #f2a16f;
+    border: 1px solid #f2a16f;
+    color: white;
+}
