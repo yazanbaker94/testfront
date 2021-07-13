@@ -8,6 +8,9 @@ import axios from 'axios';
 import Footer from './componants/Footer';
 // import Findtalentcard from './componants/Findtalentcard';
 import Profilecard from './componants/Profilecard';
+import Updateform from './componants/Updateform';
+import { withAuth0 } from '@auth0/auth0-react';
+
 
 class FindTalent extends Component {
   constructor(props) {
@@ -76,6 +79,7 @@ class FindTalent extends Component {
       <div>
         <Header />
         <JobModal show={this.state.show} hide={this.hideModal} showData={this.state.jobData} />
+        <Updateform/>
         <Carousel>
           <Carousel.Item>
             <img
@@ -115,4 +119,4 @@ class FindTalent extends Component {
   }
 }
 
-export default FindTalent;
+export default withAuth0(FindTalent);
