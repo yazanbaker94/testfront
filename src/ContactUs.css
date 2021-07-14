@@ -1,0 +1,131 @@
+img {
+    vertical-align: middle;
+    border-style: none;
+    width: 25px;
+}
+.eradaImg{
+    width: 50px;
+}
+.headershow h1{
+    position: relative;
+    top: -100px;
+    font-size: 60px;
+    margin-left: 50px;
+    margin-top: 150px;
+    margin-bottom: 0px;
+    color: #F2A16F;
+    font-family:Arial, Helvetica, sans-serif;
+    /* font-weight: bold; */
+}
+.headershow h2 {
+   font-size: 30px;
+   color: #434F4D;
+   margin-left: 50px;
+   font-family:Arial, Helvetica, sans-serif;
+   font-weight: bold;
+   position: relative;
+   top: -40px;
+
+}
+.icon{
+    position: relative;
+    top: 10px;
+    left: 50px;
+    clear: both;
+    /* padding-top: 10px; */
+    padding-right:20px;
+    color: black;
+    color: #434F4D;
+}
+
+.headershow h2 a img  {
+    margin: 10px;
+}
+
+.imgheader{
+    position: absolute;
+    top: 0;
+    width :90%;
+   height: 700px;
+    z-index :-1
+}
+/*..................feedback form...........*/
+.textForm{
+    position: relative;
+    top: 100px;
+    color: #434F4D;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    
+}
+.formmain{     position: relative;
+    top: 100px;
+    background-color: #F2A16F;
+    color: #475351;
+    margin-top: 40px;
+    border: 5px solid #434F4D ;
+}
+.formheaders{
+    color: #434F4D;
+    font-family:Arial, Helvetica, sans-serif;
+    margin-top: 20px;
+    margin-left: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.inputform{
+    background-color: #D0CECD;
+}
+.inputform2{
+    background-color: #D0CECD;
+}
+.formmain button {
+    background-color:#D0CECD;
+    color: #434F4D;
+}
+.savebtn{
+    margin-left: 900px;
+    width: 85px;
+}
+
+.textForm{
+   background-color: white;
+    text-align: center;
+    margin-top: 210px;
+    color: #434F4D;
+}
+/*...................third section.........*/
+.textteam{
+    position: relative;
+    top: 100px;
+    color: #F2A16F;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 70px;
+    font-weight: bold;
+    margin-left: 500px;
+    
+}
+.cardgroup{
+    /* margin-left: 200px; */
+    /* width:900px; */
+    /* padding-left: 100px; */
+}
+.card1{
+    display: inline-block;
+    position: relative;
+    left: 0px;
+    text-align: center;
+    width:400px;
+    margin-left: 180px;
+    margin-bottom: 100px;
+}
+
+.images{
+    /* border-radius: 200px; */
+    width: 400px;
+}
+.images1{
+    width: 400px;
+    height:400px;
+}
