@@ -29,10 +29,10 @@ export class UpdateFormModal extends Component {
 
 
     render() {
-        const { user, isAuthenticated } = this.props.auth0;
+        const { isAuthenticated } = this.props.auth0;
         return (
             <div>
-            {isAuthenticated ? <Button variant="warning" type="submit" onClick={this.showModal} variant="outline-secondary"    className='updateJob'>Update Selected Job</Button>: ''}
+            {isAuthenticated ? <Button variant="warning" type="submit" onClick={this.showModal}    className='updateJob'>Update Selected Job</Button>: ''}
             {this.state.showModal && (
 
                 <Modal show={this.state.showModal} onHide={this.handleclose}>
@@ -43,12 +43,12 @@ export class UpdateFormModal extends Component {
                         <Form onSubmit={this.props.UpdateJob}>
                             <Form.Group className="mb-3" controlId="formBasicEmail">
                                 <Form.Label style={{fontFamily:'Arial, Helvetica, sans-serif',fontWeight:'bold'}}>Update Company Name</Form.Label>
-                                <Form.Control type="text"  value={this.props.newCompanyName} onChange={this.props.nameOnChange} />
+                                <Form.Control type="text"   onChange={this.props.nameOnChange} />
                            
                                 <Form.Label style={{fontFamily:'Arial, Helvetica, sans-serif',fontWeight:'bold'}}>Update Job Title</Form.Label>
-                                <Form.Control type="text" value={this.props.newJobTitle}  onChange={this.props.jobTitleChange}/>
+                                <Form.Control type="text"  onChange={this.props.jobTitleChange}/>
                                 <Form.Label style={{fontFamily:'Arial, Helvetica, sans-serif',fontWeight:'bold'}}>Update Job Description</Form.Label>
-                                <Form.Control type="text" value={this.props.newDescription} onChange={this.props.descriptionChange} />
+                                <Form.Control type="text"  onChange={this.props.descriptionChange} />
                       <Button type='submit' variant="secondary" style={{marginTop:'20px'}}>Update Current Job</Button>
                             </Form.Group>
                         </Form>

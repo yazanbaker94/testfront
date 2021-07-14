@@ -23,7 +23,7 @@ class ContactUs extends Component {
         <Header />
 
         <div className="headershow">
-          <img className="imgheader" src="/contact2.png" />
+          <img className="imgheader" src="/contact2.png" alt=''/>
           <h1 >  Contact Informations  </h1>
           <h2>Phone: 777-999-000</h2>
           <h2>

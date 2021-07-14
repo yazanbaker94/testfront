@@ -81,7 +81,7 @@ class FindTalent extends Component {
         <br></br>
         <br></br>
         <h1 style={{ textAlign: 'center' }}>Our Freelancers</h1>
-        <h1></h1>
+        
         {
            this.state.freelanceData.map((element, index) => {
             return <>

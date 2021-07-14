@@ -2,8 +2,7 @@ import React, { Component } from 'react'
 import { Button, Modal } from "react-bootstrap"
 import Profilecard from './Profilecard';
 import axios from 'axios';
-import userEvent from '@testing-library/user-event';
-import { faThList } from '@fortawesome/free-solid-svg-icons';
+
 
 import { withAuth0 } from '@auth0/auth0-react';
 export class Updateform extends Component {
@@ -160,7 +159,7 @@ export class Updateform extends Component {
     //      })
     //  }
     render() {
-        const { user, isAuthenticated } = this.props.auth0;
+        const { isAuthenticated } = this.props.auth0;
         return (
             <div>
                 {isAuthenticated ? <Button variant="warning" onClick={() => { this.handleModal() }}>Promote yourself</Button> : ''}

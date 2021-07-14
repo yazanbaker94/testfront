@@ -152,7 +152,7 @@ class PostWork extends Component {
 
 
   render() {
-    const { user, isAuthenticated } = this.props.auth0;
+    const {  isAuthenticated } = this.props.auth0;
     return (
       <div >
         <Header />

@@ -4,7 +4,7 @@ import { withAuth0 } from '@auth0/auth0-react';
 
 
 import {
-    BrowserRouter as Router,
+    
     Link
 } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
