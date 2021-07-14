@@ -7,12 +7,12 @@ import Header from './componants/Header'
 import './ContactUs.css';
 import Footer from './componants/Footer'
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faFacebook,
-  faInstagram,
-  faTwitter
-} from "@fortawesome/free-brands-svg-icons";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import {
+//   faFacebook,
+//   faInstagram,
+//   faTwitter
+// } from "@fortawesome/free-brands-svg-icons";
 
 
 class ContactUs extends Component {
@@ -31,9 +31,9 @@ class ContactUs extends Component {
           </h2>
 
           <h2> Social Media Links <br></br>
-            <FontAwesomeIcon icon={faFacebook} className="icon" size="2x" />
+            {/* <FontAwesomeIcon icon={faFacebook} className="icon" size="2x" />
             <FontAwesomeIcon icon={faInstagram} className="icon" size="2x" />
-            <FontAwesomeIcon icon={faTwitter} className="icon" size="2x" />
+            <FontAwesomeIcon icon={faTwitter} className="icon" size="2x" /> */}
 
 
           </h2>

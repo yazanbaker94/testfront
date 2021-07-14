@@ -129,7 +129,7 @@ export class Profile extends Component {
             bio: this.state.newBio,
             phone: this.state.newPhone,
             websiteUrl: this.state.newWeb,
-            email: 'razanalamleh@gmail.com'
+            email: 'softwaredohanow@gmail.com'
         }
         const updateFreelanceUser = await axios.put(`http://localhost:3001/userfreelance/${this.state.index}`, bodydata)
         this.setState({
@@ -140,9 +140,9 @@ export class Profile extends Component {
 
     componentDidMount = async () => {
 
-        let email = 'razanalamleh@gmail.com'
+        let email = 'softwaredohanow@gmail.com'
         console.log('email', email)
-        const url = `http://localhost:3001/userfreelance?email=razanalamleh@gmail.com`;
+        const url = `http://localhost:3001/userfreelance?email=softwaredohanow@gmail.com`;
         axios.get(url).then(response => {
             console.log('previous data', response);
             this.setState({
@@ -155,7 +155,7 @@ export class Profile extends Component {
         (e).preventDefault();
         try {
             const reqBody = {
-                email: "razanalamleh@gmail.com",
+                email: "softwaredohanow@gmail.com",
                 name: this.state.newName,
                 skills: this.state.newSkills,
                 bio: this.state.newBio,
@@ -195,7 +195,7 @@ export class Profile extends Component {
         })
         //  const{user}=this.props.auth0;
         const qureyParams = {
-            email: 'razanalamleh@gmail.com'
+            email: 'softwaredohanow@gmail.com'
         }
         await axios.delete(`http://localhost:3001/userfreelance/${free_idx}`, { params: qureyParams })
 

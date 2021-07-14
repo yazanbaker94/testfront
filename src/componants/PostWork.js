@@ -65,7 +65,7 @@ class PostWork extends Component {
   };
 
   componentDidMount = async () => {
-    await axios.get(`http://localhost:3001/jobs?email=razanalamleh@gmail.com`).then(response => {
+    await axios.get(`http://localhost:3001/jobs?email=softwaredohanow@gmail.com`).then(response => {
       this.setState({
         jobsData: response.data,
         mounted: true
@@ -116,7 +116,7 @@ class PostWork extends Component {
     })
 
     const queryParams = {
-      email: 'razanalamleh@gmail.com'
+      email: 'softwaredohanow@gmail.com'
     }
     await axios.delete(`http://localhost:3001/jobs/${index}`, { params: queryParams })
   };
@@ -142,7 +142,7 @@ class PostWork extends Component {
       companyName: this.state.newCompanyName,
       jobTitle: this.state.newJobTitle,
       description: this.state.newDescription,
-      email: 'razanalamleh@gmail.com'
+      email: 'softwaredohanow@gmail.com'
     }
     const updateJob = await axios.put(`http://localhost:3001/jobs/${this.state.index}`, bodydata)
     this.setState({

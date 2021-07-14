@@ -93,7 +93,7 @@ export class Updateform extends Component {
         this.setState({ show: !this.state.show })
     }
     componentDidMount = async () => {
-        let email = 'razanalamleh@gmail.com'
+        let email = 'softwaredohanow@gmail.com'
         console.log('email', email)
         const url = `http://localhost:3001/userfreelance?email=${email}`;
         axios.get(url).then(response => {
@@ -107,7 +107,7 @@ export class Updateform extends Component {
         (e).preventDefault();
         try {
             const reqBody = {
-                email: "razanalamleh@gmail.com",
+                email: "softwaredohanow@gmail.com",
                 name: this.state.newName,
                 skills: this.state.newSkills,
                 bio: this.state.newBio,
@@ -137,7 +137,7 @@ export class Updateform extends Component {
         })
         //  const{user}=this.props.auth0;
         const qureyParams = {
-            email: 'razanalamleh@gmail.com'
+            email: 'softwaredohanow@gmail.com'
         }
         await axios.delete(`http://localhost:3001/userfreelance/${free_idx}`, { params: qureyParams })
     }
